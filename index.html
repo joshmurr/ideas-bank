@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ideas Bank</title>
+	<style type="text/css">
+		#ideaContainer{
+			background-color: #5050FF;
+			margin: 2px;
+			width: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		function submission(e) {
+			var text = e;
+			var mainDiv = document.getElementById("allIdeas");
+			var newDiv = document.createElement('div');
+			newDiv.setAttribute('id', ideaContainer);
+			newDiv.innerHTML = text;
+			mainDiv.appendChild(newDiv);
+			//console.log(text);
+		}
+	</script>
+</head>
+
+<body>
+	<form>
+		<p>Write down your idea:</p>
+		<br>
+		<input type="text" name="ideaInput" size="36"></input>
+		<br>
+		<input type="submit" value="Submit" onclick="submission(this.form.ideaInput.value)">
+	</form>
+	<div id="allIdeas">
+		<div id="ideaContainer">Test One</div>
+		<div id="ideaContainer">Test Two</div>
+	</div>
+	
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+
+</html>
