@@ -1,0 +1,80 @@
+@font-face{
+	font-family: Menlo;
+	src: url("Menlo.ttc");
+}
+body {
+	background-color: #3FB8AF;
+	font: 14px Menlo, sans-serif;
+}
+
+.formBox{
+	background-color: #FF9E9D;
+	width: 354px;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+	border-radius: 5px;
+	text-align: left;
+	float: left;
+}
+
+form p{
+	background-color: #DAD8A7;
+	border-radius: 3px;
+	width: 185px;
+	height: 20px;
+	text-align: center;
+	color: #184541;
+}
+
+#titleBox{
+	background-color: #DAD8A7;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+#ideaBox{
+	background-color: #DAD8A7;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+#submitButton{
+	width: 80px;
+	height: 25px;
+	font: 16px Menlo, sans-serif;
+	border: none;
+	border-radius: 3px;
+	box-shadow: none;
+	background-color: #FF3D7F;
+	text-align: center;
+	margin: 2px;
+}
+
+.idea {
+	background-color: #7FC7AF;
+	width: 354px;
+	height: 250px;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+	border-radius: 5px;
+	position: relative;
+}
+
+.ideaTitle{
+	/*border: 1px solid;*/
+	color: #609684;
+	margin: 2px;
+	text-align: center;
+}
+
+.ideaContainer{
+	
+	color: #184541;
+	margin: 2px;
+	text-align: left;
+	width: 350px;
+}
