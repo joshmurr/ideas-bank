@@ -1,0 +1,18 @@
+<html>
+<body>
+<?php
+	header('Content-Type: text/html');
+	$connection = mysqli_connect("127.0.0.1","root","frogsplat25", "test");
+	if (mysqli_connect_errno()) {
+	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	$sql="INSERT INTO ib_entry (title, contents) VALUES ('$_POST[titleInput]','$_POST[ideaInput]')";
+	if (!mysqli_query($con,$sql)) {
+	  die('Error: ' . mysqli_error($con));
+	}
+	echo "1 record added";
+
+	mysqli_close($con);
+?>
+</body>
+</html>
