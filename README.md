@@ -7,7 +7,7 @@ If you have any ideas regarding the webiste itself, either post them on the page
 
 The website was my first venture into the realms of PHP and MySQL so I'm sure the code is messy and hard to follow but I will get round to commenting the code and trying my best to tidy it up in good time.
 
-#Tools
+##Tools
 
 If it is of any interest to any one (I know it would be to me), my text editor of choice for building this website was Sublime Text 2. I also instantly fell in love with Live Reload which is a small app which automatically refreshes the web page you are working on in the browser each time you save the file - it makes web development so much easier.
 
