@@ -11,9 +11,9 @@
 	<div id="header"><br><br>
 		<h1>Ideas Bank</h1>
 		<h2>Open-Sourced Ideas<br><br> ver 1.0a</h2><br>
-		<form>
-			<button type="submit" formaction="about.html" id="aboutButton">About</button>
-		</form>
+		<a href="about.html"><button type="submit" id="aboutButton">About</button></a>
+		<a href="https://github.com/joshmurr/ideas-bank"><button type="submit" id="aboutButton">Code</button></a>
+		<a href="mailto:joshuadavidmurr@gmail.com?Subject=Ideas%20Bank%20Improvements"><button type="submit" id="aboutButton">Help Me</button></a>
 	</div>
 	<div class="formBox">
 	<form action="data.php" method="post">
@@ -33,7 +33,7 @@
 	</form>
 	</div>
 	<?php
-		$connection = mysqli_connect("localhost","root","root","ideas");
+		$connection = mysqli_connect("localhost","joshmurr_jm","frogsplat25","joshmurr_ideasbank");
 		if (mysqli_connect_errno()) {
 		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		}
@@ -45,7 +45,6 @@
 		//echo $result;
 		while($row = mysqli_fetch_array($result)){
 			$userEmail = $row['email'];
-			echo "<script>console.log(\"" . $userEmail . "\");</script>";
 			if(strlen($userEmail) > 0){
 				$email = "<a href=\"mailto:" . $userEmail . "?Subject=Ideas%20Bank%20Idea\">Contact the Author</a>";
 			} else {
@@ -53,7 +52,7 @@
 			}
 			echo "<div class=\"idea\">
 						<div class=\"ideaTitle\">" . $row['title'] . "</div><br>
-						<div class=\"ideaContainer\">" . $row['idea'] . "</div>
+						<div class=\"ideaContainer\">" . nl2br($row['idea']) . "</div>
 						<div class=\"emailContainer\">". $email ."</div>
 						<form action=\"flag.php\" method=\"post\">
 							<input name=\"idValue\" value=\"" . $row['id'] . "\" style=\"display: none\">
@@ -61,8 +60,7 @@
 						</form>
 					</div>";
 		}
-		mysqli_close($con);
+		mysqli_close($connection);
 	?>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

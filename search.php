@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-	$connection = mysqli_connect("localhost","root","root","ideas");
+	$connection = mysqli_connect("localhost","joshmurr_jm","frogsplat25","joshmurr_ideasbank");
 	if (mysqli_connect_errno()) {
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
@@ -26,8 +26,8 @@
 			if($tagone==$searchTag || $tagtwo==$searchTag || $tagthree==$searchTag){
 				echo "<div class=\"idea\">
 						<div class=\"ideaTitle\">" . $row['title'] . "</div><br>
-						<div class=\"ideaTitle ideaContainer\">" . $row['idea'] . "</div>
-						<div class=\"emailContainer\"><a href=\"mailto:" . $row['email'] . "?Subject=Ideas%20Bank%20Idea\">" . $row['email'] . "</a></div>
+						<div class=\"ideaContainer\">" . $row['idea'] . "</div>
+						<div class=\"emailContainer\">". $email ."</div>
 						<form action=\"flag.php\" method=\"post\">
 							<input name=\"idValue\" value=\"" . $row['id'] . "\" style=\"display: none\">
 							<input type=\"submit\" value=\"Flag\" id=\"flagButton\">
@@ -35,7 +35,7 @@
 					</div>";
 		}
 	}
-	mysqli_close($con);
+	mysqli_close($connection);
 ?>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-	$connection = mysqli_connect("localhost","root","root","ideas");
+	$connection = mysqli_connect("localhost","joshmurr_jm","frogsplat25","joshmurr_ideasbank");
 	if (mysqli_connect_errno()) {
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
@@ -21,7 +21,7 @@
 			<br><br>Thank you. <br><br> The idea has been flagged.<br><br><br>
 			<a href=\"index.php\"><input type=\"button\" value=\"Back\" id=\"aboutButton\"></a>
 		</div>";
-	mysqli_close($con);
+	mysqli_close($connection);
 	exit();
 ?>
 </body>
