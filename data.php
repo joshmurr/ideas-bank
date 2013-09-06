@@ -8,7 +8,7 @@
 </head>
 <body>
 	<?php
-		$connection = mysqli_connect("localhost","joshmurr_jm","frogsplat25","joshmurr_ideasbank");
+		$connection = mysqli_connect("localhost","root","root","ideas");
 		if (mysqli_connect_errno()) {
 		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		}
